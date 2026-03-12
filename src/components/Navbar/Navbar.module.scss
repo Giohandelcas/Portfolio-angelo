@@ -1,0 +1,27 @@
+.nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 8%;
+
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+
+  z-index: 100;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
