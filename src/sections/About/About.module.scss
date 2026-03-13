@@ -1,0 +1,26 @@
+.about {
+  padding: 120px 8%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.text p {
+  color: #94a3b8;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.video video {
+  width: 100%;
+  border-radius: 12px;
+}

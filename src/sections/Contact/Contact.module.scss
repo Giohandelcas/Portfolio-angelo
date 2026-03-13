@@ -1,0 +1,42 @@
+.contact {
+  padding: 120px 8%;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  color: #94a3b8;
+  margin-bottom: 30px;
+}
+
+.actions {
+  margin-bottom: 30px;
+}
+
+.primary {
+  padding: 14px 28px;
+  background: #3b82f6;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 24px;
+}
+
+.links a {
+  color: #94a3b8;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  color: #3b82f6;
+}

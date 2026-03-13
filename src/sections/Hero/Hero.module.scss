@@ -1,0 +1,60 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    background: radial-gradient(circle at 30% 30%,
+            rgba(59, 130, 246, 0.2),
+            transparent 40%);
+}
+
+.content {
+    max-width: 700px;
+}
+
+
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #3b82f6;
+    color: white;
+}
+
+.primary:hover {
+    transform: translateY(-2px);
+}
+
+.secondary {
+    background: transparent;
+    border: 1px solid #3b82f6;
+    color: white;
+}
+
+.secondary:hover {
+    background: #3b82f6;
+}
