@@ -1,44 +1,60 @@
-import { motion } from "framer-motion";
-import styles from "./About.module.scss";
-import videoSergi from "../../assets/videos/sergio.mp4";
+import { useInView } from 'react-intersection-observer';
+import styles from './About.module.scss';
+import videoSrc from '../../assets/videos/sergio.mp4'; 
 
 function About() {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
-    <section id="about" className={styles.about}>
-      <motion.div
-        className={styles.container}
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
+    <section className={styles.about} id="about" ref={ref}>
+      <div className={styles.container}>
         <div className={styles.text}>
-          <h2>About Me</h2>
-
+          <h2>
+            Sobre <span>Mí</span>
+          </h2>
           <p>
-            Hi, I'm Angelo Del Castillo, a Full Stack Developer focused on
-            building modern web applications with clean architecture and great
-            user experience.
+            Soy un desarrollador web apasionado por crear experiencias digitales
+            únicas y funcionales. Con más de 5 años de experiencia en el sector,
+            he trabajado con clientes de todo el mundo.
+          </p>
+          <p>
+            Mi enfoque combina diseño creativo con código limpio y eficiente,
+            asegurando que cada proyecto no solo se vea increíble, sino que
+            también funcione perfectamente.
           </p>
 
-          <p>
-            I enjoy working with modern technologies like React, Node.js and
-            PostgreSQL, and I’m passionate about creating solutions that help
-            businesses grow.
-          </p>
-
-          <p>
-            I'm constantly learning new technologies and improving my skills to
-            build better digital products.
-          </p>
+          <div className={styles.statsContainer}>
+            <div className={styles.statItem}>
+              <h3>2+</h3>
+              <p>Años de experiencia como Product manager</p>
+            </div>
+            <div className={styles.statItem}>
+              <h3>1+</h3>
+              <p>Año trabajando como Desarrollador Web</p>
+            </div>
+            <div className={styles.statItem}>
+              <h3>20+</h3>
+              <p>Clientes felices</p>
+            </div>
+          </div>
         </div>
 
         <div className={styles.video}>
-          <video autoPlay loop muted>
-            <source src={videoSergi} type="video/mp4" />
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            poster="path/to/poster.jpg" // Opcional: imagen de preview
+          >
+            <source src={videoSrc} type="video/mp4" />
+            Tu navegador no soporta el elemento de video.
           </video>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }
