@@ -1,8 +1,10 @@
+import mili from "../assets/images/mili.png";
+
 const projects = [
   {
     title: "Mili",
     description: "Platform for managing logistics operations.",
-    image: "../assets/images/mili.png",
+    image: {mili},
     tech: ["React", "Node", "PostgreSQL"],
     demo: "#",
     github: "#",

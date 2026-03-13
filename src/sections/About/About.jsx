@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import styles from "./About.module.scss";
+import videoSergi from "../../assets/videos/sergio.mp4";
 
 function About() {
   return (
@@ -34,7 +35,7 @@ function About() {
 
         <div className={styles.video}>
           <video autoPlay loop muted>
-            <source src="../assets/video/dev.mp4" type="video/mp4" />
+            <source src={videoSergi} type="video/mp4" />
           </video>
         </div>
       </motion.div>
