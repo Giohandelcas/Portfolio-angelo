@@ -1,37 +1,22 @@
 .card {
-
   display: block;
-
   background: #1e293b;
-
   padding: 30px;
-
   border-radius: 12px;
-
   margin-bottom: 20px;
-
   text-decoration: none;
-
   transition: 0.3s;
-
 }
 
 .card:hover {
-
   transform: translateY(-5px);
-
   background: #334155;
-
 }
 
 .card h3 {
-
   margin-bottom: 10px;
-
 }
 
 .card p {
-
   color: #94a3b8;
-
 }
