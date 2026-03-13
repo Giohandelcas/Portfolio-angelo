@@ -1,36 +1,79 @@
 # Porfolio
 
+## Stack used:
+
+Frontend
+React
+Vite
+React Router
+Framer Motion
+CSS Modules
+Sass
+Blog
+Markdown
+react-markdown
+Deploy
+Vercel
+
 ## Arquitecture
 
-src
+```text
+portfolio
 │
-├── assets
-│   └── images
+├── public
 │
-├── components
-│   ├── Navbar
-│   └── LoadingScreen
+├── src
 │
-├── sections
-│   ├── Hero
-│   ├── About
-│   ├── Skills
-│   ├── Projects
-│   └── Contact
+│   ├── assets
+│   │   ├── images
+│   │   ├── icons
 │
-├── pages
-│   ├── Home.jsx
-│   └── Blog.jsx
+│   ├── components
+│   │   ├── Navbar
+│   │   ├── Button
+│   │   ├── ProjectCard
+│   │   ├── LoadingScreen
+│   │   └── Skeleton
 │
-├── router
-│   └── AppRouter.jsx
+│   ├── sections
+│   │   ├── Hero
+│   │   ├── About
+│   │   ├── Skills
+│   │   ├── Projects
+│   │   └── Contact
 │
-├── styles
-│   ├── globals.scss
-│   └── variables.scss
+│   ├── pages
+│   │   ├── Home.jsx
+│   │   └── Blog.jsx
 │
-├── App.jsx
-└── main.jsx
+│   ├── blog
+│   │   ├── posts
+│   │   │   ├── react-hooks.md
+│   │   │   └── jwt-guide.md
+│   │   └── BlogCard.jsx
+│
+│   ├── hooks
+│   │   ├── useDarkMode.js
+│   │   └── useLanguage.js
+│
+│   ├── context
+│   │   └── LanguageContext.jsx
+│
+│   ├── data
+│   │   ├── projects.js
+│   │   └── skills.js
+│
+│   ├── router
+│   │   └── AppRouter.jsx
+│
+│   ├── styles
+│   │   ├── globals.scss
+│   │   ├── variables.scss
+│   │   └── mixins.scss
+│
+│   ├── App.jsx
+│   └── main.jsx
+```
 
 
 ## React + Vite
