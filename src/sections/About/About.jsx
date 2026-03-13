@@ -33,11 +33,11 @@ function About() {
             </div>
             <div className={styles.statItem}>
               <h3>1+</h3>
-              <p>Año trabajando como Desarrollador Web</p>
+              <p>Año de experiencia como Desarrollador Web</p>
             </div>
             <div className={styles.statItem}>
-              <h3>20+</h3>
-              <p>Clientes felices</p>
+              <h3>10+</h3>
+              <p>Proyectos</p>
             </div>
           </div>
         </div>
