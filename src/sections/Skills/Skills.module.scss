@@ -1,50 +1,334 @@
 .skills {
   padding: 120px 8%;
-  text-align: center;
-}
-
-.skills h2 {
-  font-size: 2.5rem;
-  margin-bottom: 50px;
-}
-
-.marquee {
-  overflow: hidden;
   position: relative;
+  background: linear-gradient(135deg, #0a0f1f, #0e1a2b, #1a1f35);
+  overflow: hidden;
+
+  // Mismo fondo de partículas del hero
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      /* Partículas pequeñas - azules */
+      radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.3) 1px, transparent 1px),
+      radial-gradient(circle at 30% 50%, rgba(59, 130, 246, 0.25) 1px, transparent 1px),
+      radial-gradient(circle at 70% 15%, rgba(59, 130, 246, 0.3) 1px, transparent 1px),
+      radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.2) 1px, transparent 1px),
+      /* Partículas medianas - violetas */
+      radial-gradient(circle at 45% 30%, rgba(139, 92, 246, 0.2) 2px, transparent 2px),
+      radial-gradient(circle at 85% 40%, rgba(139, 92, 246, 0.2) 2px, transparent 2px),
+      radial-gradient(circle at 15% 75%, rgba(139, 92, 246, 0.15) 2px, transparent 2px),
+      /* Partículas grandes - celestes */
+      radial-gradient(circle at 55% 85%, rgba(56, 189, 248, 0.15) 3px, transparent 3px),
+      radial-gradient(circle at 75% 25%, rgba(56, 189, 248, 0.12) 3px, transparent 3px),
+      radial-gradient(circle at 25% 45%, rgba(56, 189, 248, 0.1) 4px, transparent 4px);
+    
+    background-size: 200px 200px, 180px 180px, 150px 150px, 220px 220px,
+                     250px 250px, 200px 200px, 280px 280px,
+                     300px 300px, 350px 350px, 400px 400px;
+    
+    background-position: 0 0, 50px 100px, 150px 200px, 300px 50px,
+                        100px 300px, 400px 400px, 250px 500px,
+                        500px 100px, 350px 600px, 50px 700px;
+    
+    animation: moveParticles 60s linear infinite;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  // Segunda capa de partículas (como en el hero)
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(circle at 20% 40%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+      radial-gradient(circle at 60% 70%, rgba(255, 255, 255, 0.08) 2px, transparent 2px),
+      radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    
+    background-size: 300px 300px, 400px 400px, 500px 500px;
+    background-position: 0 0, 200px 100px, 400px 300px;
+    
+    animation: moveParticlesReverse 80s linear infinite;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 60px;
+    background: linear-gradient(135deg, #fff, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      border-radius: 3px;
+    }
+  }
+}
+
+// Asegurar que el contenido esté sobre las partículas
+.categoryTitle {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 60px 0 30px;
+  color: #e2e8f0;
+  position: relative;
+  z-index: 1;
+
+  span {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding: 0 10px;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+}
+
+// Carrusel principal
+.marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 20%,
+    black 80%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 20%,
+    black 80%,
+    transparent
+  );
+  z-index: 1;
+
+  &:hover .track {
+    animation-play-state: paused;
+  }
 }
 
 .track {
   display: flex;
-  gap: 60px;
-  animation: scroll 13s linear infinite;
+  gap: 40px;
+  width: fit-content;
+  animation: scroll 30s linear infinite;
 }
 
+// Carrusel secundario (dirección opuesta)
+.marqueeReverse {
+  composes: marquee;
+  margin-top: 60px;
+
+  .track {
+    animation: scrollReverse 30s linear infinite;
+  }
+}
+
+// Tarjetas de habilidades
 .skill {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 40px;
-  color: #e2e8f0;
-  transition: transform 0.3s;
+  gap: 12px;
+  padding: 30px 40px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  transition: all 0.3s ease;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+
+  // Efecto de brillo en hover
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(59, 130, 246, 0.2),
+      transparent
+    );
+    transition: left 0.5s ease;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+    border-color: #3b82f6;
+    box-shadow: 
+      0 10px 30px rgba(59, 130, 246, 0.3),
+      0 0 0 2px rgba(59, 130, 246, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+
+    &::before {
+      left: 100%;
+    }
+
+    svg {
+      animation: bounce 0.5s ease;
+      filter: drop-shadow(0 0 20px currentColor);
+    }
+  }
+
+  svg {
+    font-size: 3.5rem;
+    color: #3b82f6;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 5px 15px rgba(59, 130, 246, 0.3));
+    z-index: 1;
+  }
+
+  span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    background: linear-gradient(135deg, #fff, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    z-index: 1;
+  }
 }
 
-.skill span {
-  font-size: 14px;
-  margin-top: 8px;
-  color: #94a3b8;
+// Animaciones de partículas (copiadas del hero)
+@keyframes moveParticles {
+  0% {
+    background-position: 0 0, 50px 100px, 150px 200px, 300px 50px,
+                        100px 300px, 400px 400px, 250px 500px,
+                        500px 100px, 350px 600px, 50px 700px;
+  }
+  100% {
+    background-position: 200px 200px, 250px 300px, 350px 400px, 500px 250px,
+                        300px 500px, 600px 600px, 450px 700px,
+                        700px 300px, 550px 800px, 250px 900px;
+  }
 }
 
-.skill:hover {
-  transform: translateY(-5px) scale(0.8);
-  color: #3b82f6;
+@keyframes moveParticlesReverse {
+  0% {
+    background-position: 0 0, 200px 100px, 400px 300px;
+  }
+  100% {
+    background-position: -300px -300px, -100px -200px, 100px -100px;
+  }
 }
 
 @keyframes scroll {
-  from {
+  0% {
     transform: translateX(0);
   }
-
-  to {
+  100% {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollReverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .skills {
+    padding: 80px 5%;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+
+  .track {
+    gap: 20px;
+  }
+
+  .skill {
+    padding: 20px 25px;
+
+    svg {
+      font-size: 2.5rem;
+    }
+
+    span {
+      font-size: 0.9rem;
+    }
+  }
+
+  .marqueeReverse {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill {
+    padding: 15px 20px;
+
+    svg {
+      font-size: 2rem;
+    }
   }
 }
