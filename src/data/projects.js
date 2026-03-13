@@ -4,7 +4,7 @@ const projects = [
   {
     title: "Mili",
     description: "Platform for managing logistics operations.",
-    image: {mili},
+    image: mili,
     tech: ["React", "Node", "PostgreSQL"],
     demo: "#",
     github: "#",
