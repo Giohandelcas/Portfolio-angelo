@@ -13,3 +13,12 @@ body {
 section {
   padding: 100px 8%;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  max-width: 1200px;
+  margin: auto;
+}
