@@ -4,7 +4,6 @@
   background: linear-gradient(135deg, #0a0f1f, #0e1a2b, #1a1f35);
   overflow: hidden;
 
-  // Mismo fondo de partículas del hero
   &::before {
     content: '';
     position: absolute;
@@ -41,7 +40,7 @@
     z-index: 0;
   }
 
-  // Segunda capa de partículas (como en el hero)
+  // Segunda capa de partículas
   &::after {
     content: '';
     position: absolute;
@@ -241,7 +240,7 @@
   }
 }
 
-// Animaciones de partículas (copiadas del hero)
+// Animaciones de partículas
 @keyframes moveParticles {
   0% {
     background-position: 0 0, 50px 100px, 150px 200px, 300px 50px,

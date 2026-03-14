@@ -22,8 +22,12 @@ function ProjectCard({ project }) {
         </div>
 
         <div className={styles.buttons}>
-          <a href={project.demo}>Demo</a>
-          <a href={project.github}>GitHub</a>
+          <a href={project.demo} target="_blank" rel="noopener noreferrer">
+            Demo
+          </a>
+          <a href={project.github} target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
         </div>
       </div>
     </motion.div>

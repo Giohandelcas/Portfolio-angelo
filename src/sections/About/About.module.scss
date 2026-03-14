@@ -4,7 +4,6 @@
   background: linear-gradient(180deg, #0a0f1f 0%, #0e1a2b 100%);
   overflow: hidden;
 
-  // Efecto de fondo sutil
   &::before {
     content: '';
     position: absolute;
@@ -72,7 +71,7 @@
   }
 }
 
-// Stats o características
+// Stats
 .statsContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -81,12 +80,12 @@
 }
 
 .statItem {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto auto; // Número arriba, texto abajo
+  gap: 8px;
   text-align: center;
-  text-align: center;
-  justify-content: center;
-  padding: 10px;
+  padding: 20px 15px;
+  min-height: 140px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   backdrop-filter: blur(10px);

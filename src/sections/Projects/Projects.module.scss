@@ -4,7 +4,6 @@
   background: linear-gradient(180deg, #0a0f1f 0%, #0e1a2b 100%);
   overflow: hidden;
 
-  // Mismo fondo de partículas del hero
   &::before {
     content: '';
     position: absolute;
