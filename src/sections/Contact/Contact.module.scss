@@ -151,7 +151,6 @@
       }
     }
 
-    // Colores específicos para cada red social
     &:nth-child(1):hover {
       color: #333;
     }
@@ -175,7 +174,6 @@
   }
 }
 
-// Información de contacto alternativa
 .contactInfo {
   display: flex;
   justify-content: center;
@@ -224,29 +222,6 @@
   }
 }
 
-// Animaciones de partículas
-@keyframes moveParticles {
-  0% {
-    background-position: 0 0, 50px 100px, 150px 200px, 300px 50px,
-                        100px 300px, 400px 400px, 250px 500px,
-                        500px 100px, 350px 600px, 50px 700px;
-  }
-  100% {
-    background-position: 200px 200px, 250px 300px, 350px 400px, 500px 250px,
-                        300px 500px, 600px 600px, 450px 700px,
-                        700px 300px, 550px 800px, 250px 900px;
-  }
-}
-
-@keyframes moveParticlesReverse {
-  0% {
-    background-position: 0 0, 200px 100px, 400px 300px;
-  }
-  100% {
-    background-position: -300px -300px, -100px -200px, 100px -100px;
-  }
-}
-
 // Animaciones de entrada
 @keyframes fadeInUp {
   from {
@@ -268,20 +243,6 @@
     width: 150px;
     opacity: 1;
   }
-}
-
-// Efecto de ondas decorativas
-.waves {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%233b82f6' fill-opacity='0.1' d='M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,170.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 0;
-  opacity: 0.3;
 }
 
 // Responsive

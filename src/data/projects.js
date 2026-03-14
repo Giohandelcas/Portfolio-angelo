@@ -16,7 +16,7 @@ const projects = [
     title: "Leypal",
     description: "Leypal es una plataforma de firma electrónica avanzada con total validez legal en Latinoamérica. Cada firma está protegida con tecnología blockchain",
     image: leypal,
-    tech: ["React", "Express", "PostgreSQL"],
+    tech: [],
     demo: "https://app.leypalco.com/login",
     github: "https://github.com/Giohandelcas",
     type: "professional",

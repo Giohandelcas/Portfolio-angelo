@@ -1,5 +1,6 @@
 .hero {
   min-height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +18,7 @@
   z-index: 1;
 }
 
-// Fondo de partículas mejorado - MÁS VISIBLES
+// Fondo de partículas
 .hero::before {
   content: '';
   position: absolute;
@@ -51,7 +52,7 @@
   filter: blur(0.5px);
 }
 
-// Segunda capa de partículas - MÁS VISIBLES
+// Segunda capa de partículas
 .hero::after {
   content: '';
   position: absolute;
@@ -77,24 +78,6 @@
   max-width: 700px;
 }
 
-// Animación de escritura para h1 y h2
-h1 {
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
-  border-right: 2px solid #1d46c0;
-  width: fit-content;
-}
-
-// Animación de escritura para h2
-h4 {
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
-  border-right: 2px solid #1d46c0;
-  width: fit-content;
-}
-
 h1 {
   font-size: 3.5rem;
   line-height: 1.2;
@@ -106,6 +89,24 @@ h4 {
   font-size: 1.5rem;
   color: #1d46c0;
   margin-bottom: 20px;
+}
+
+// Animación de escritura para h1
+h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  border-right: 2px solid #1d46c0;
+  width: fit-content;
+}
+
+// Animación de escritura para h4
+h4 {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  border-right: 2px solid #1d46c0;
+  width: fit-content;
 }
 
 p {
