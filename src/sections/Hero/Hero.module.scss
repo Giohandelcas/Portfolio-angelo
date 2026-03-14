@@ -1,14 +1,13 @@
 .hero {
   min-height: 100vh;
   display: flex;
-  justify-content: center; // Centrar contenido
+  justify-content: center;
   align-items: center;
   position: relative;
   background: linear-gradient(135deg, #0a0f1f, #0e1a2b, #1a1f35);
   overflow: hidden;
 }
 
-// Contenedor interno para limitar el ancho
 .heroContainer {
   width: 100%;
   max-width: 1400px;
@@ -18,7 +17,7 @@
   z-index: 1;
 }
 
-// Fondo de partículas animadas (se mantiene igual)
+// Fondo de partículas mejorado - MÁS VISIBLES
 .hero::before {
   content: '';
   position: absolute;
@@ -27,31 +26,32 @@
   width: 100%;
   height: 100%;
   background-image: 
-    radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.3) 1px, transparent 1px),
-    radial-gradient(circle at 30% 50%, rgba(59, 130, 246, 0.25) 1px, transparent 1px),
-    radial-gradient(circle at 70% 15%, rgba(59, 130, 246, 0.3) 1px, transparent 1px),
-    radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.2) 1px, transparent 1px),
-    radial-gradient(circle at 45% 30%, rgba(139, 92, 246, 0.2) 2px, transparent 2px),
-    radial-gradient(circle at 85% 40%, rgba(139, 92, 246, 0.2) 2px, transparent 2px),
-    radial-gradient(circle at 15% 75%, rgba(139, 92, 246, 0.15) 2px, transparent 2px),
-    radial-gradient(circle at 55% 85%, rgba(56, 189, 248, 0.15) 3px, transparent 3px),
-    radial-gradient(circle at 75% 25%, rgba(56, 189, 248, 0.12) 3px, transparent 3px),
-    radial-gradient(circle at 25% 45%, rgba(56, 189, 248, 0.1) 4px, transparent 4px);
+    radial-gradient(circle at 10% 20%, rgba(136, 156, 190, 0.8) 2px, transparent 2px),
+    radial-gradient(circle at 30% 50%, rgba(59, 130, 246, 0.7) 2px, transparent 2px),
+    radial-gradient(circle at 70% 15%, rgba(59, 130, 246, 0.8) 2px, transparent 2px),
+    radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.6) 2px, transparent 2px),
+    radial-gradient(circle at 45% 30%, rgba(139, 92, 246, 0.7) 4px, transparent 4px),
+    radial-gradient(circle at 85% 40%, rgba(153, 138, 187, 0.7) 4px, transparent 4px),
+    radial-gradient(circle at 15% 75%, rgba(139, 92, 246, 0.6) 4px, transparent 4px),
+    radial-gradient(circle at 55% 85%, rgba(56, 189, 248, 0.6) 5px, transparent 5px),
+    radial-gradient(circle at 75% 25%, rgba(135, 182, 202, 0.5) 5px, transparent 5px),
+    radial-gradient(circle at 25% 45%, rgba(124, 176, 198, 0.5) 6px, transparent 6px);
   
-  background-size: 200px 200px, 180px 180px, 150px 150px, 220px 220px,
-                   250px 250px, 200px 200px, 280px 280px,
-                   300px 300px, 350px 350px, 400px 400px;
+  background-size: 150px 150px, 130px 130px, 120px 120px, 180px 180px,
+                   200px 200px, 180px 180px, 220px 220px,
+                   250px 250px, 280px 280px, 300px 300px;
   
   background-position: 0 0, 50px 100px, 150px 200px, 300px 50px,
                       100px 300px, 400px 400px, 250px 500px,
                       500px 100px, 350px 600px, 50px 700px;
   
-  animation: moveParticles 60s linear infinite;
-  opacity: 0.8;
+  animation: moveParticles 40s linear infinite;
+  opacity: 1;
   pointer-events: none;
+  filter: blur(0.5px);
 }
 
-// Segunda capa de partículas
+// Segunda capa de partículas - MÁS VISIBLES
 .hero::after {
   content: '';
   position: absolute;
@@ -60,15 +60,16 @@
   width: 100%;
   height: 100%;
   background-image: 
-    radial-gradient(circle at 20% 40%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-    radial-gradient(circle at 60% 70%, rgba(255, 255, 255, 0.08) 2px, transparent 2px),
-    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    radial-gradient(circle at 20% 40%, rgba(255, 255, 255, 0.4) 2px, transparent 2px),
+    radial-gradient(circle at 60% 70%, rgba(255, 255, 255, 0.3) 3px, transparent 3px),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.25) 2px, transparent 2px),
+    radial-gradient(circle at 35% 85%, rgba(255, 255, 255, 0.2) 4px, transparent 4px);
   
-  background-size: 300px 300px, 400px 400px, 500px 500px;
-  background-position: 0 0, 200px 100px, 400px 300px;
+  background-size: 250px 250px, 300px 300px, 350px 350px, 400px 400px;
+  background-position: 0 0, 150px 80px, 300px 200px, 50px 400px;
   
-  animation: moveParticlesReverse 80s linear infinite;
-  opacity: 0.5;
+  animation: moveParticlesReverse 60s linear infinite;
+  opacity: 0.8;
   pointer-events: none;
 }
 
@@ -76,13 +77,32 @@
   max-width: 700px;
 }
 
+// Animación de escritura para h1 y h2
+h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  border-right: 2px solid #1d46c0;
+  width: fit-content;
+}
+
+// Animación de escritura para h2
+h4 {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  border-right: 2px solid #1d46c0;
+  width: fit-content;
+}
+
 h1 {
   font-size: 3.5rem;
   line-height: 1.2;
   color: white;
+  margin-bottom: 10px;
 }
 
-h2 {
+h4 {
   font-size: 1.5rem;
   color: #1d46c0;
   margin-bottom: 20px;
@@ -92,11 +112,17 @@ p {
   font-size: 1.2rem;
   color: #cbd5e1;
   margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 3.5s;
 }
 
 .buttons {
   display: flex;
   gap: 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 3.5s;
 }
 
 button {
@@ -115,6 +141,7 @@ button {
 
 .primary:hover {
   transform: translateY(-2px);
+  background: #2a5ae0;
 }
 
 .secondary {
@@ -127,7 +154,7 @@ button {
   background: #1d46c0;
 }
 
-// Animaciones
+// Animaciones de partículas
 @keyframes moveParticles {
   0% {
     background-position: 0 0, 50px 100px, 150px 200px, 300px 50px,
@@ -143,11 +170,27 @@ button {
 
 @keyframes moveParticlesReverse {
   0% {
-    background-position: 0 0, 200px 100px, 400px 300px;
+    background-position: 0 0, 150px 80px, 300px 200px, 50px 400px;
   }
   100% {
-    background-position: -300px -300px, -100px -200px, 100px -100px;
+    background-position: -300px -300px, -150px -220px, 0px -100px, -250px 100px;
   }
+}
+
+// Animaciones de texto
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #1d46c0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 // Media queries responsive
@@ -164,6 +207,10 @@ button {
 
   h1 {
     font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
   }
 
   p {
@@ -184,5 +231,9 @@ button {
 @media (max-width: 480px) {
   h1 {
     font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.1rem;
   }
 }

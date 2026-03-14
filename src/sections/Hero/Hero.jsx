@@ -6,7 +6,7 @@ function Hero() {
       <div className={styles.heroContainer}>
         <div className={styles.content}>
           <h1>Hi, I'm Angelo</h1>
-          <h2>Full Stack web Developer</h2>
+          <h4>Full Stack web Developer</h4>
           <p>
             Code with purpose. Design with passion. Create without limits.
           </p>

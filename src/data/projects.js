@@ -1,23 +1,24 @@
 import mili from "../assets/images/mili.png";
+import leypal from "../assets/images/leypalLogo.png";
 
 const projects = [
   {
     title: "Mili",
-    description: "Platform for managing logistics operations.",
+    description: "Mili es la tecnología que permite a entidades financieras, cooperativas y empresas gestionar su operación de crédito de principio a fin, bajo un modelo de marca blanca",
     image: mili,
-    tech: ["React", "Node", "PostgreSQL"],
-    demo: "#",
-    github: "#",
+    tech: ["React", "NestJS"],
+    demo: "https://mili.com.co/que-es-mili",
+    github: "https://github.com/Giohandelcas",
     type: "professional",
   },
 
   {
-    title: "Renta Container",
-    description: "System for container rental management.",
-    image: "/projects/container.png",
+    title: "Leypal",
+    description: "Leypal es una plataforma de firma electrónica avanzada con total validez legal en Latinoamérica. Cada firma está protegida con tecnología blockchain",
+    image: leypal,
     tech: ["React", "Express", "PostgreSQL"],
-    demo: "#",
-    github: "#",
+    demo: "https://app.leypalco.com/login",
+    github: "https://github.com/Giohandelcas",
     type: "professional",
   },
 
