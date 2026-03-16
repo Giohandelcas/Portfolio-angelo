@@ -13,27 +13,27 @@ function About() {
       <div className={styles.container}>
         <div className={styles.text}>
           <h2>
-            Sobre <span>Mí</span>
+            About <span>me</span>
           </h2>
           <p>
-            Soy desarrollador full stack con mas de un año de experiencia creando soluciones web completas. Durante este tiempo he trabajado en proyectos personales y colaborativos que me han permitido dominar tecnologías, además de adoptar buenas prácticas como el control de versiones con Git y metodologías ágiles.
+              I'm a full-stack developer with over a year of experience building comprehensive web solutions. During this time, I have worked on personal and collaborative projects that have allowed me to master various technologies, as well as adopt best practices such as version control with Git and agile methodologies.
           </p>
           <p>
-            Disfruto enfrentarme a nuevos desafíos que me saquen de mi zona de confort y me permitan seguir creciendo como profesional. Mi objetivo es aportar soluciones reales con código limpio, responsable y escalable.
+            I enjoy facing new challenges that push me out of my comfort zone and allow me to continue growing as a professional. My goal is to contribute real solutions with clean, responsible, and scalable code.
           </p>
 
           <div className={styles.statsContainer}>
             <div className={styles.statItem}>
               <h3>2+</h3>
-              <p>Años de experiencia como Product manager</p>
+              <p>Years of experience as Product Manager</p>
             </div>
             <div className={styles.statItem}>
               <h3>1+</h3>
-              <p>Años de experiencia como full stack developer</p>
+              <p>Year of experience as Full Stack Developer</p>
             </div>
             <div className={styles.statItem}>
               <h3>2</h3>
-              <p>Idiomas: Español C1 y Inglés B2+</p>
+              <p>Languages: Spanish C1 and English B2+</p>
             </div>
           </div>
         </div>
