@@ -1,15 +1,25 @@
+import { useState } from "react";
 import styles from "./Hero.module.scss";
 
 function Hero() {
-  const downloadCV = () => {
-    const cvUrl = '/Angelo-Resume.pdf';
+  const [showLanguageOptions, setShowLanguageOptions] = useState(false);
+
+  const downloadCV = (language) => {
+    const cvUrls = {
+      es: '/AngeloDelcastilloCVspanish.pdf', 
+      en: '/AngeloDelcastilloCVenglish.pdf'  
+    };
+    
+    const cvUrl = cvUrls[language];
+    const fileName = language === 'es' ? 'Angelo_CV_Espanol.pdf' : 'Angelo_CV_Ingles.pdf';
     
     const link = document.createElement('a');
     link.href = cvUrl;
-    link.download = 'Angelo_CV.pdf';
+    link.download = fileName;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    setShowLanguageOptions(false); 
   };
 
   const handleLetTalk = () => {
@@ -33,9 +43,27 @@ function Hero() {
             <button className={styles.primary} onClick={handleLetTalk}>
               Let's talk
             </button>
-            <button className={styles.secondary} onClick={downloadCV}>
-              Download CV
-            </button>
+            
+            {/* Contenedor del botón de CV con selector de idioma */}
+            <div className={styles.cvContainer}>
+              <button 
+                className={styles.secondary}
+                onClick={() => setShowLanguageOptions(!showLanguageOptions)}
+              >
+                Download CV
+              </button>
+              
+              {showLanguageOptions && (
+                <div className={styles.languageOptions}>
+                  <button onClick={() => downloadCV('en')}>
+                    🇬🇧 English
+                  </button>
+                  <button onClick={() => downloadCV('es')}>
+                    🇪🇸 Español
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
