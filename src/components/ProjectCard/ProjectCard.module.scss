@@ -2,7 +2,7 @@
   background: #1e293b;
   border-radius: 12px;
   overflow: hidden;
-
+  will-change: transform;
   transition: 0.3s;
 }
 
@@ -45,8 +45,24 @@
 }
 
 .buttons a {
-  padding: 8px 14px;
-  background: #3b82f6;
-  border-radius: 6px;
+  display: inline-block;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #1d46c0, #3b82f6);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
   font-size: 14px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(29, 70, 192, 0.3);
+}
+
+.buttons a:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+
+.buttons a:active {
+  transform: scale(0.97);
+  box-shadow: 0 3px 8px rgba(29, 70, 192, 0.25);
 }
