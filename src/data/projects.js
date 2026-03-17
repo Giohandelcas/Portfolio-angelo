@@ -5,7 +5,7 @@ import portfolio from "../assets/images/portfolioCap.png";
 const projects = [
   {
     title: "Mili",
-    description: "Mili es la tecnología que permite a entidades financieras, cooperativas y empresas gestionar su operación de crédito de principio a fin, bajo un modelo de marca blanca.",
+    description: "Mili is the technology that enables financial institutions, credit unions, and businesses to manage their lending operations from start to finish under a white-label model.",
     image: mili,
     tech: ["React", "NestJS"],
     demo: "https://mili.com.co/que-es-mili",
@@ -15,7 +15,7 @@ const projects = [
 
   {
     title: "Leypal",
-    description: "Leypal es una plataforma de firma electrónica avanzada con total validez legal en Latinoamérica. Cada firma está protegida con tecnología blockchain.",
+    description: "Leypal is an advanced electronic signature platform that is fully legally valid in Latin America. Each signature is protected by blockchain technology.",
     image: leypal,
     tech: [],
     demo: "https://app.leypalco.com/login",
