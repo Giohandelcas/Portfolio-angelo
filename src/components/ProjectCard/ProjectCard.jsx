@@ -5,8 +5,10 @@ function ProjectCard({ project }) {
   return (
     <motion.div
       className={styles.card}
-      whileHover={{ y: -10 }}
-      transition={{ duration: 0.3 }}
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      whileHover={{ translateY: -10, scale: 1.02 }}
     >
       <img src={project.image} alt={project.title} />
 
