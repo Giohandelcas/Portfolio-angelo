@@ -2,6 +2,14 @@ import styles from "./Contact.module.scss";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 function Contact() {
+const handleLetTalk = () => {
+    // Link de WhatsApp 
+    const whatsappLink = 'https://wa.link/hxkteh';
+    
+    // Abrir en nueva pestaña
+    window.open(whatsappLink, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <section id="contact" className={styles.contact}>
       <h2>Let's Work Together</h2>
@@ -11,21 +19,21 @@ function Contact() {
       </p>
 
       <div className={styles.actions}>
-        <a href="mailto:angelo@email.com" className={styles.primary}>
+        <a className={styles.primary} onClick={handleLetTalk}>
           Let's Talk
         </a>
       </div>
 
       <div className={styles.links}>
-        <a href="#">
+        <a href="https://github.com/Giohandelcas" target="_blank" rel="noopener noreferrer">
           <FaGithub />
         </a>
 
-        <a href="#">
+        <a href="https://www.linkedin.com/in/angelo-del-castillo-a649221ab/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
         </a>
 
-        <a href="mailto:angelo@email.com">
+        <a href="mailto:giohandelcas@gmail.com" target="_blank" rel="noopener noreferrer">
           <FaEnvelope />
         </a>
       </div>
