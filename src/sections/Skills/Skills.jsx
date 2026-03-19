@@ -84,7 +84,7 @@ function Skills() {
       <div className={styles.marquee}>
         <div className={styles.track}>
           {duplicatedFrontend.map((skill, index) => (
-            <div key={`front-${index}`} className={styles.skill}>
+            <div key={`front-${skill.name}-${index}`} className={styles.skill}>
               {renderIcon(skill)}
               <span>{skill.name}</span>
             </div>
@@ -99,7 +99,7 @@ function Skills() {
       <div className={styles.marqueeReverse}>
         <div className={styles.track}>
           {duplicatedBackend.map((skill, index) => (
-            <div key={`back-${index}`} className={styles.skill}>
+            <div key={`back-${skill.name}-${index}`} className={styles.skill}>
               {renderIcon(skill)}
               <span>{skill.name}</span>
             </div>
@@ -114,7 +114,7 @@ function Skills() {
       <div className={styles.marquee}>
         <div className={styles.track}>
           {duplicatedTools.map((skill, index) => (
-            <div key={`tool-${index}`} className={styles.skill}>
+            <div key={`tool-${skill.name}-${index}`} className={styles.skill}>
               {renderIcon(skill)}
               <span>{skill.name}</span>
             </div>
