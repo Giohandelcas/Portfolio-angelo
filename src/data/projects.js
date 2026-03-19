@@ -28,7 +28,7 @@ const projects = [
     description: "Personal portfolio website to showcase my work and skills.",
     image: portfolio,
     tech: ["React", "SCSS"],
-    demo: "https://porfolio-angelodev.vercel.app",
+    demo: "https://angelodelcastillo.com",
     github: "https://github.com/Giohandelcas/Portfolio-angelo",
     type: "professional",
   },
