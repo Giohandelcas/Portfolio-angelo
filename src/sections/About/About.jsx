@@ -11,7 +11,7 @@ function About() {
   return (
     <section className={styles.about} id="about" ref={ref}>
       <div className={styles.container}>
-        <div className={styles.text}>
+        <div className={`${styles.text} ${inView ? styles.visible : ''}`}>
           <h2>
             About <span>me</span>
           </h2>

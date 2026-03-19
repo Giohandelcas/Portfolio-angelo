@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
 import styles from "./ProjectCard.module.scss";
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, index = 0 }) {
   return (
     <motion.div
       className={styles.card}
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
-      whileHover={{ translateY: -10, scale: 1.02 }}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.12 }}
+      whileHover={{ y: -8, scale: 1.02, transition: { duration: 0.2 } }}
     >
       <img src={project.image} alt={project.title} />
 

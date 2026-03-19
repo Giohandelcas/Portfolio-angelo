@@ -26,8 +26,8 @@ function Projects() {
       </div>
 
       <div className={styles.grid}>
-        {filteredProjects.map((project) => (
-          <ProjectCard key={project.title} project={project} />
+        {filteredProjects.map((project, index) => (
+          <ProjectCard key={project.title} project={project} index={index} />
         ))}
       </div>
     </section>

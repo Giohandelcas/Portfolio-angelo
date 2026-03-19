@@ -21,7 +21,8 @@
     background-clip: text;
     position: relative;
     z-index: 1;
-    animation: fadeInUp 0.6s ease;
+    opacity: 0;
+    transform: translateY(30px);
 
     &::after {
       content: '';
@@ -29,11 +30,11 @@
       bottom: -15px;
       left: 50%;
       transform: translateX(-50%);
-      width: 150px;
+      width: 0;
       height: 4px;
       background: linear-gradient(135deg, #3b82f6, #8b5cf6);
       border-radius: 4px;
-      animation: expandWidth 0.8s ease forwards;
+      opacity: 0;
     }
   }
 
@@ -46,7 +47,22 @@
     line-height: 1.6;
     position: relative;
     z-index: 1;
-    animation: fadeInUp 0.6s ease 0.2s both;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  &.visible {
+    h2 {
+      animation: fadeInUp 0.6s ease forwards;
+
+      &::after {
+        animation: expandWidth 0.8s ease 0.4s forwards;
+      }
+    }
+
+    p {
+      animation: fadeInUp 0.6s ease 0.2s forwards;
+    }
   }
 }
 
@@ -58,7 +74,12 @@
   margin-bottom: 60px;
   position: relative;
   z-index: 1;
-  animation: fadeInUp 0.6s ease 0.4s both;
+  opacity: 0;
+  transform: translateY(30px);
+
+  .visible & {
+    animation: fadeInUp 0.6s ease 0.4s forwards;
+  }
 
   .primary {
     padding: 18px 45px;
@@ -108,7 +129,12 @@
   gap: 25px;
   position: relative;
   z-index: 1;
-  animation: fadeInUp 0.6s ease 0.6s both;
+  opacity: 0;
+  transform: translateY(30px);
+
+  .visible & {
+    animation: fadeInUp 0.6s ease 0.6s forwards;
+  }
 
   a {
     width: 65px;

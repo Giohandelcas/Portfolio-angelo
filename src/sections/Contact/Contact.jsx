@@ -1,17 +1,17 @@
 import styles from "./Contact.module.scss";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { useInView } from "react-intersection-observer";
 
 function Contact() {
-const handleLetTalk = () => {
-    // Link de WhatsApp 
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
+
+  const handleLetTalk = () => {
     const whatsappLink = 'https://wa.link/hxkteh';
-    
-    // Abrir en nueva pestaña
     window.open(whatsappLink, '_blank', 'noopener,noreferrer');
   };
 
   return (
-    <section id="contact" className={styles.contact}>
+    <section id="contact" className={`${styles.contact} ${inView ? styles.visible : ''}`} ref={ref}>
       <h2>Let's Work Together</h2>
 
       <p>
