@@ -39,10 +39,13 @@ function About() {
         </div>
 
         <div className={styles.video}>
-          <video controls
+          <video
+            controls
             playsInline
+            preload="none"
+            loading="lazy"
           >
-            <source src={videoSrc} type="video/mp4" />
+            {inView && <source src={videoSrc} type="video/mp4" />}
             Tu navegador no soporta el elemento de video.
           </video>
         </div>

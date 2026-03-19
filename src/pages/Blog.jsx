@@ -20,8 +20,8 @@ function Blog() {
 
       <div style={{ marginTop: "40px" }}>
 
-        {posts.map((post, index) => (
-          <BlogCard key={index} post={post} />
+        {posts.map((post) => (
+          <BlogCard key={post.slug} post={post} />
         ))}
 
       </div>

@@ -18,8 +18,8 @@ function ProjectCard({ project }) {
         <p>{project.description}</p>
 
         <div className={styles.tech}>
-          {project.tech.map((tech, index) => (
-            <span key={index}>{tech}</span>
+          {project.tech.map((tech) => (
+            <span key={tech}>{tech}</span>
           ))}
         </div>
 
