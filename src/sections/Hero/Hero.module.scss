@@ -91,22 +91,29 @@ h4 {
   margin-bottom: 20px;
 }
 
-// Animación de escritura para h1
+// Animación de escritura para h1 — escribe primero, luego cursor desaparece
 h1 {
   overflow: hidden;
   white-space: nowrap;
-  animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
   border-right: 2px solid #1d46c0;
   width: fit-content;
+  animation:
+    typing 1.5s steps(30, end) forwards,
+    blink-caret 0.6s step-end 3,
+    hide-cursor 0s 1.5s forwards;
 }
 
-// Animación de escritura para h4
+// Animación de escritura para h4 — espera a que h1 termine
 h4 {
   overflow: hidden;
   white-space: nowrap;
-  animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
   border-right: 2px solid #1d46c0;
   width: fit-content;
+  opacity: 0;
+  animation:
+    show-element 0s 1.6s forwards,
+    typing 1.8s steps(30, end) 1.6s forwards,
+    blink-caret 0.6s step-end infinite 3.5s;
 }
 
 p {
@@ -114,14 +121,15 @@ p {
   color: #cbd5e1;
   margin-bottom: 30px;
   opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
-  animation-delay: 3.5s;
+  animation: fadeIn 0.8s ease-out 3.7s forwards;
 }
 
 .buttons {
   display: flex;
   gap: 1rem;
   position: relative;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 4.2s forwards;
 }
 
 .cvContainer {
@@ -212,6 +220,14 @@ p {
 
 .secondary:hover {
   background: #1d46c0;
+}
+
+@keyframes hide-cursor {
+  to { border-color: transparent; }
+}
+
+@keyframes show-element {
+  to { opacity: 1; }
 }
 
 // Animaciones de partículas
