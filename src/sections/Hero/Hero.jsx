@@ -6,12 +6,12 @@ function Hero() {
 
   const downloadCV = (language) => {
     const cvUrls = {
-      es: '/AngeloDelcastilloCVspanish.pdf', 
-      en: '/AngeloDelcastilloCVenglish.pdf'  
+      es: '/Angelo_CV_Spanish.docx.pdf', 
+      en: '/Angelo_CV_English.docx.pdf'  
     };
     
     const cvUrl = cvUrls[language];
-    const fileName = language === 'es' ? 'Angelo_CV_Espanol.pdf' : 'Angelo_CV_Ingles.pdf';
+    const fileName = language === 'es' ? 'Angelo_CV_Espanol.docx.pdf' : 'Angelo_CV_Ingles.docx.pdf';
     
     const link = document.createElement('a');
     link.href = cvUrl;
@@ -34,7 +34,7 @@ function Hero() {
     <section className={styles.hero} id="hero">
       <div className={styles.heroContainer}>
         <div className={styles.content}>
-          <h1>Hi, I'm Angelo</h1>
+          <h1>Hi, I'm Angelo Del Castillo</h1>
           <h4>Full Stack web Developer</h4>
           <p>
             Code with purpose. Design with passion. Create without limits.
