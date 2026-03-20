@@ -35,16 +35,6 @@ const projects = [
   },
 
   {
-    title: "Task Manager Pro",
-    description: "Task management app with authentication.",
-    image: "/projects/taskmanager.png",
-    tech: ["React", "Node", "JWT"],
-    demo: "#",
-    github: "#https://github.com/Giohandelcas",
-    type: "personal",
-  },
-
-  {
     title: "Inventory System",
     description: "A full-stack inventory management system designed for small retail stores. It allows store owners to track stock levels, manage products, and receive low-stock alerts in real time.",
     image: inventory,
