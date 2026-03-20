@@ -1,6 +1,7 @@
 import mili from "../assets/images/mili.png";
 import leypal from "../assets/images/leypalLogo.png";
 import portfolio from "../assets/images/portfolioCap.png";
+import inventory from "../assets/images/inventoryP.png";
 
 const projects = [
   {
@@ -39,27 +40,17 @@ const projects = [
     image: "/projects/taskmanager.png",
     tech: ["React", "Node", "JWT"],
     demo: "#",
-    github: "#",
+    github: "#https://github.com/Giohandelcas",
     type: "personal",
   },
 
   {
     title: "Inventory System",
-    description: "Inventory management for small stores.",
-    image: "/projects/inventory.png",
-    tech: ["React", "Express"],
-    demo: "#",
-    github: "#",
-    type: "personal",
-  },
-
-  {
-    title: "Ecommerce REST API",
-    description: "REST API for ecommerce platforms.",
-    image: "/projects/api.png",
-    tech: ["Node", "Express", "PostgreSQL"],
-    demo: "#",
-    github: "#",
+    description: "A full-stack inventory management system designed for small retail stores. It allows store owners to track stock levels, manage products, and receive low-stock alerts in real time.",
+    image: inventory,
+    tech: ["React", "Node", "Express", "Vite", "Tailwind", "SQLite", "Claude AI"],
+    demo: "#https://giohandelcas.github.io/",
+    github: "#https://github.com/Giohandelcas/Inventory-System",
     type: "personal",
   },
 ];
